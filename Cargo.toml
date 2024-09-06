@@ -4,3 +4,4 @@ resolver = "2"
 
 [workspace.dependencies]
 bundler = { path = "bundler" }
+dino-macros = { path = "dino-macros" }
