@@ -12,6 +12,7 @@ pub struct JsWorker {
 
 #[derive(Debug, TypedBuilder, IntoJs)]
 pub struct Req {
+    #[builder(default)]
     pub headers: HashMap<String, String>,
     #[builder(setter(into))]
     pub method: String,
@@ -115,7 +116,6 @@ mod tests {
         let req = Req::builder()
             .method("GET")
             .url("https://example.com")
-            .headers(HashMap::new())
             .build();
         let worker = JsWorker::try_new(code).unwrap();
         let ret = worker.run("hello", req).unwrap();

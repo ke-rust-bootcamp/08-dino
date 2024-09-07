@@ -17,6 +17,9 @@ serde_yaml = "0.9.34"
 thiserror = "1.0.61"
 tokio = { workspace = true }
 tracing = { workspace = true }
+dino-macros = { workspace = true }
+rquickjs = { version = "0.6.2", features = ["full"] }
+typed-builder = "0.20.0"
 
 [dev-dependencies]
 tracing-subscriber = { workspace = true }
